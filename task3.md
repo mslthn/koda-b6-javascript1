@@ -20,7 +20,7 @@ flowchart TD
 
     if18@{shape: diamond, label: "age > 18"}
     benar18@{shape: lean-r, label: "output: #quot;How are you today?#quot;"}
-    salah18@{shape:lean-r, label: "output: #quot;Let's go to school!#quot;"}
+    salah18@{shape: lean-r, label: "output: #quot;Let's go to school!#quot;"}
 
     ifHobi@{shape: diamond, label: "hobbies[0] === #quot;Programming#quot;"}
     benarHobi@{shape: lean-r, label: "output: #quot;I love JavaScript!#quot;"}
