@@ -16,7 +16,7 @@ flowchart TD
     benarJohn@{shape: lean-r, label: "output: #quot;Hi #quot;, fullName"}
 
     else@{shape: diamond}
-    hola@{shape: lean-r, label: "#quot;Hola!#quot;"}
+    hola@{shape: lean-r, label: "output: #quot;Hola!#quot;"}
 
     if18@{shape: diamond, label: "age > 18"}
     benar18@{shape: lean-r, label: "output: #quot;How are you today?#quot;"}
