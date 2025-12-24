@@ -7,25 +7,37 @@ flowchart TD
     hobbies = [#quot;Programming#quot;]"}
 
     ifJane@{shape: diamond, label: "fullName === #quot;Jane#quot;"}
-    benarJane@{shape: lean-r, label: "output: `Hello ${fullName}`"}
+    benarJane@{shape: lean-r, label: "output: #quot;Hello ${fullName}#quot;"}
 
     ifDanJohn@{shape: diamond, label: "fullName === #quot;Dan#quot; || fullName === #quot;John#quot;"}
-    outDanJohn@{shape: lean-r, label: "`Whats'up ${fullName}`"}
+    outDanJohn@{shape: lean-r, label: "output: #quot;Whats'up ${fullName}#quot;"}
 
-    ifJohn@{shape: diamond}
-    benarJohn@{shape: diamond, label: "`Hi ${fullName}`"}
+    ifJohn@{shape: diamond, label: "fullName === #quot;John#quot;"}
+    benarJohn@{shape: diamond, label: "#quot;Hi ${fullName}#quot;"}
 
     else@{shape: diamond}
+    hola@{shape: lean-r, label: "#quot;Hola!#quot;"}
 
-    if18@{shape diamond}
+    if18@{shape: diamond, label: "age > 18"}
+    benar18@{shape: lean-r, label: "output: #quot;How are you today?#quot;"}
+    salah18@{shape:lean-r, label: "output: #quot;Let's go to school!#quot;"}
+
+    ifHobi@{shape: diamond, label: "hobbies[0] === #quot;Programming#quot;"}
+    benarHobi@{shape: lean-r, label: "output: #quot;I love JavaScript!#quot;"}
+
 
     
 
 mulai-->def-->ifJane
-ifJane-->|true| benarJane
+ifJane-->|true| benarJane-->selesai
 ifJane-->|false| ifDanJohn
-ifDanJohn-->|true| outDanJohn
+ifDanJohn-->|true| outDanJohn-->if18
+if18-->|true| benar18-->selesai
+if18-->|false| salah18
+salah18-->ifHobi
+ifHobi-->|true| benarHobi-->selesai
+
 ifDanJohn-->|false| ifJohn
-ifJohn
-ifJohn-->|false| else
+ifJohn-->|True| benarJohn-->selesai
+ifJohn-->|false| else-->hola-->selesai
 ```
