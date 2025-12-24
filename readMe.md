@@ -4,16 +4,23 @@
 #### Flowchart
 ```mermaid
 flowchart TD
+    mulai@{ shape: circ, label: "Mulai"}
+    input@{ shape: lean-r, label: "Input: r"}
+    defRumus@{ shape: rect, label: "phi = 22/7
+    hitungLuas = phi * r * r
+    hitungKeliling = 2 * phi * r"}
+    
+    if@{shape: diamond, label: "r%7 == 0"}
+    inP3@{ shape: rect, label: "phi = 3.14"}
+    
+    selesai@{ shape: dbl-circ, label: "Selesai"}
 
-mulai@{shape: circ, label: "start"}
-selesai@{shape: dbl-circ}
-inputR@{shape: lean-r, label: "input: r"}
-proses@{shape: rect, label: "phi = 22/7
-hitungLuas = phi * r * r
-hitungKeliling = 2 * phi * r"}
-outputLuas@{shape: lean-r, label: "output: #quot;Luas lingkaran = #quot; + hitungLuas"}
-outputKel@{shape: lean-r, label: "output: #quot;Keliling lingkaran = #quot; + hitungKeliling"}
+    output@{ shape: lean-r, label: "Output:
+    #quot;Luas Lingkaran = #quot; +hitungLuas,
+    #quot;Keliling Lingkaran = #quot; +hitungKeliling"}
 
-mulai-->inputR-->proses-->outputLuas
-outputLuas-->outputKel-->selesai
+    
+mulai-->input-->defRumus-->if
+if-->|True| output-->selesai
+if-->|False| inP3-->output
 ```
