@@ -2,7 +2,8 @@
 flowchart TD
     mulai@{ shape: circ, label: "Mulai"}
     selesai@{shape: dbl-circ}
-    def@{shape: lean-r, label: "fullName = #quot;John#quot;
+    def@{shape: lean-r, label: "input: 
+    fullName = #quot;John#quot;
     age = 20
     hobbies = [#quot;Programming#quot;]"}
 
