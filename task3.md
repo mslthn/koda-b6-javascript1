@@ -7,13 +7,13 @@ flowchart TD
     hobbies = [#quot;Programming#quot;]"}
 
     ifJane@{shape: diamond, label: "fullName === #quot;Jane#quot;"}
-    benarJane@{shape: lean-r, label: "output: #quot;Hello ${fullName}#quot;"}
+    benarJane@{shape: lean-r, label: "output: #quot;Hello #quot;, fullName"}
 
     ifDanJohn@{shape: diamond, label: "fullName === #quot;Dan#quot; || fullName === #quot;John#quot;"}
-    outDanJohn@{shape: lean-r, label: "output: #quot;Whats'up ${fullName}#quot;"}
+    outDanJohn@{shape: lean-r, label: "output: #quot;Whats'up #quot;, fullName"}
 
     ifJohn@{shape: diamond, label: "fullName === #quot;John#quot;"}
-    benarJohn@{shape: lean-r, label: "output: #quot;Hi ${fullName}#quot;"}
+    benarJohn@{shape: lean-r, label: "output: #quot;Hi #quot;, fullName"}
 
     else@{shape: diamond}
     hola@{shape: lean-r, label: "#quot;Hola!#quot;"}
