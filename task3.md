@@ -13,7 +13,7 @@ flowchart TD
     outDanJohn@{shape: lean-r, label: "output: #quot;Whats'up ${fullName}#quot;"}
 
     ifJohn@{shape: diamond, label: "fullName === #quot;John#quot;"}
-    benarJohn@{shape: diamond, label: "#quot;Hi ${fullName}#quot;"}
+    benarJohn@{shape: lean-r, label: "output: #quot;Hi ${fullName}#quot;"}
 
     else@{shape: diamond}
     hola@{shape: lean-r, label: "#quot;Hola!#quot;"}
