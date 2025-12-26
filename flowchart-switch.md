@@ -6,7 +6,8 @@ init@{shape: lean-r, label: "input:
 let IS_FEATURE_ACTIVE = #quot;#quot;
 let num = 100"}
 
-switch@{shape: diamond, label: "IS_FEATURE_ACTIVE"}
+swT@{shape: diamond, label: "true"}
+swF@{shape: diamond, label: "false"}
 caseT@{shape: lean-r, label: "output: #quot;Hello#quot;"}
 caseF@{shape: lean-r, label: "output: #quot;Hi#quot;"}
 default@{}
@@ -16,10 +17,12 @@ else@{shape: lean-r, label: "output: #quot;Bonjour!#quot;"}
 lanjutan@{shape: lean-r, label: "output: #quot;Lanjutan#quot;"}
 selesai@{shape: dbl-circ}
 
-start-->init-->switch
-switch-->|case true| caseT
-switch-->|case false| caseF
-switch-->default
+start-->init
+init-->swT-->caseT
+swT-->|false| swF
+swF-->caseF
+swF-->|false| default
+
 default-->if
 if-->ifT
 if-->else
