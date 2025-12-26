@@ -24,11 +24,11 @@ swF-->|true| caseF
 swF-->|false| default
 
 default-->if
-if-->ifT
-if-->else
+if-->|true| ifT
+if-->|else| else
 caseT-->lanjutan
 caseF-->lanjutan
-ifT-->|true| lanjutan
+ifT--> lanjutan
 else-->lanjutan
 lanjutan-->selesai
 ```
