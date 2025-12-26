@@ -10,8 +10,8 @@ swT@{shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
 swF@{shape: diamond, label: "IS_FEATURE_ACTIVE == false"}
 caseT@{shape: lean-r, label: "output: #quot;Hello#quot;"}
 caseF@{shape: lean-r, label: "output: #quot;Hi#quot;"}
-default@{}
-if@{shape: diamond, label: "num === 100"}
+default@{shape: diamond}
+if@{shape: diamond, label: "num == 100"}
 ifT@{shape: lean-r, label: "output: num"}
 else@{shape: lean-r, label: "output: #quot;Bonjour!#quot;"}
 lanjutan@{shape: lean-r, label: "output: #quot;Lanjutan#quot;"}
@@ -25,7 +25,7 @@ swF-->|false| default
 
 default-->if
 if-->|true| ifT
-if-->|else| else
+if-->|false| else
 caseT-->lanjutan
 caseF-->lanjutan
 ifT--> lanjutan
