@@ -6,12 +6,12 @@ init@{shape: lean-r, label: "input:
 IS_FEATURE_ACTIVE = #quot;#quot;
 num = 100"}
 
-swT@{shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
-swF@{shape: diamond, label: "IS_FEATURE_ACTIVE == false"}
+swT@{shape: diamond, label: "IS_FEATURE_ACTIVE === true"}
+swF@{shape: diamond, label: "IS_FEATURE_ACTIVE === false"}
 caseT@{shape: lean-r, label: "output: #quot;Hello#quot;"}
 caseF@{shape: lean-r, label: "output: #quot;Hi#quot;"}
 
-if@{shape: diamond, label: "num == 100"}
+if@{shape: diamond, label: "num === 100"}
 ifT@{shape: lean-r, label: "output: num"}
 else@{shape: lean-r, label: "output: #quot;Bonjour!#quot;"}
 lanjutan@{shape: lean-r, label: "output: #quot;Lanjutan#quot;"}
@@ -21,7 +21,7 @@ start-->init
 init-->swT-->|true| caseT
 swT-->|false| swF
 swF-->|true| caseF
-swF-->|default| if
+swF-->|false| if
 if-->|true| ifT
 if-->|false| else
 caseT-->lanjutan
