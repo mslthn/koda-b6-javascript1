@@ -17,8 +17,8 @@ lanjutan@{shape: lean-r, label: "output: #quot;Lanjutan#quot;"}
 selesai@{shape: dbl-circ}
 
 start-->init-->switch
-switch-->|true| caseT
-switch-->|false| caseF
+switch-->|case true| caseT
+switch-->|case false| caseF
 switch-->default
 default-->if
 if-->ifT
