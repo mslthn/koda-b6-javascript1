@@ -21,9 +21,7 @@ start-->init
 init-->swT-->|true| caseT
 swT-->|false| swF
 swF-->|true| caseF
-swF-->|false| default
-
-default-->if
+swF-->|default| if
 if-->|true| ifT
 if-->|false| else
 caseT-->lanjutan
