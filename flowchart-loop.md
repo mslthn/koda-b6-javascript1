@@ -32,8 +32,10 @@ forStop@{shape: dbl-circ, label: "stop"}
 
 start-->init
 init-->cons
-cons-->update-->for
+cons-->update-->if
+if-->|true| ifTrue
+if-->|false| update
+ifTrue-->for
 for-->|false| forStop
-for-->|true| if-->|true| ifTrue
-ifTrue-->cons
+for-->|true| update
 ```
