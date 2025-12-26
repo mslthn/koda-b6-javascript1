@@ -3,14 +3,14 @@ flowchart TD
 
 start@{shape: circ}
 init@{shape: lean-r, label: "input: 
-let IS_FEATURE_ACTIVE = #quot;#quot;
-let num = 100"}
+IS_FEATURE_ACTIVE = #quot;#quot;
+num = 100"}
 
 swT@{shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
 swF@{shape: diamond, label: "IS_FEATURE_ACTIVE == false"}
 caseT@{shape: lean-r, label: "output: #quot;Hello#quot;"}
 caseF@{shape: lean-r, label: "output: #quot;Hi#quot;"}
-default@{shape: diamond}
+
 if@{shape: diamond, label: "num == 100"}
 ifT@{shape: lean-r, label: "output: num"}
 else@{shape: lean-r, label: "output: #quot;Bonjour!#quot;"}
