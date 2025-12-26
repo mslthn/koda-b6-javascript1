@@ -6,8 +6,8 @@ init@{shape: lean-r, label: "input:
 let IS_FEATURE_ACTIVE = #quot;#quot;
 let num = 100"}
 
-swT@{shape: diamond, label: "case true"}
-swF@{shape: diamond, label: "case false"}
+swT@{shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
+swF@{shape: diamond, label: "IS_FEATURE_ACTIVE == false"}
 caseT@{shape: lean-r, label: "output: #quot;Hello#quot;"}
 caseF@{shape: lean-r, label: "output: #quot;Hi#quot;"}
 default@{}
