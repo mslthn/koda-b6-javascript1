@@ -37,5 +37,5 @@ if-->|true| ifTrue
 if-->|false| update
 ifTrue-->for
 for-->|false| forStop
-for-->|true| update
+for-->|true| cons
 ```
