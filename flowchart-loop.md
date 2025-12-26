@@ -2,7 +2,7 @@
 ```mermaid
 flowchart TD
 start@{shape: circ}
-init@{shape: lean-r, label: "x=1"}
+init@{shape: lean-r, label: "input: x=1"}
 for@{shape: diamond, label: "i<=10"}
 cons@{shape: lean-r, label: "output: x"}
 if@{shape: diamond, label: "x==5"}
