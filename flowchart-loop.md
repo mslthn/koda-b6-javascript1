@@ -13,7 +13,7 @@ forStop@{shape: dbl-circ, label: "stop"}
 
 start-->init-->for-->|true| cons-->if
 if-->|true| ifTrue 
-if-->|false| for
+if-->|false| update
 for-->|false| forStop
 
 ifTrue-->update-->for
