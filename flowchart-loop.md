@@ -39,12 +39,3 @@ ifTrue-->update
 for-->|false| forStop
 for-->|true| cons
 ```
-let x=1
-do{
-    console.log(x)
-    if( x === 5 ){
-        x=10
-    }
-    x++
-
-} while(x<=10)
