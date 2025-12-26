@@ -19,7 +19,7 @@ CtoK@{shape: rect, label: "result = temp + 273.15"}
 
 rc@{shape: diamond, label: "tempSource === #quot;R#quot;
 && convertTo === #quot;C#quot;"}
-RtoC@{shape: rect, label: "result = temp / 0.8"}
+RtoC@{shape: rect, label: "result = temp * 5/4"}
 rf@{shape: diamond, label: "tempSource === #quot; R #quot;
 && convertTo === #quot; F #quot;"}
 RtoF@{shape: rect, label: "result = (temp * 2.25) + 32"}
@@ -49,42 +49,43 @@ kf@{shape: diamond, label: "tempSource === #quot; K #quot;
 KtoF@{shape: rect, label: "result = (temp * 9/5) - 459.67"}
 
 console@{shape: lean-r, label: "output: result"}
+stop@{shape: dbl-circ}
 
 start-->input-->cr
-cr-->|true| CtoR-->console
+cr-->|true| CtoR-->console-->stop
 cr-->|false| cf
 
-cf-->|true| CtoF-->console
+cf-->|true| CtoF-->console-->stop
 cf-->|false| ck
 
-ck-->|true| CtoK-->console
+ck-->|true| CtoK-->console-->stop
 ck-->|false| rc
 
-rc-->|true| RtoC-->console
+rc-->|true| RtoC-->console-->stop
 rc-->|false| rf
 
-rf-->|true| RtoF-->console
+rf-->|true| RtoF-->console-->stop
 rf-->|false| rk
 
-rk-->|true| RtoK-->console
+rk-->|true| RtoK-->console-->stop
 rk-->|false| fc
 
-fc-->|true| FtoC-->console
+fc-->|true| FtoC-->console-->stop
 fc-->|false| fr
 
-fr-->|true| FtoR-->console
+fr-->|true| FtoR-->console-->stop
 fr-->|false| fk
 
-fk-->|true| FtoK-->console
+fk-->|true| FtoK-->console-->stop
 fk-->|false| kc
 
-kc-->|true| KtoC-->console
+kc-->|true| KtoC-->console-->stop
 kc-->|false| kr
 
-kr-->|true| KtoR-->console
+kr-->|true| KtoR-->console-->stop
 kr-->|false| kf
 
-kf-->|true| KtoF-->console
+kf-->|true| KtoF-->console-->stop
 kf-->|false| default
 
 default-->stop
